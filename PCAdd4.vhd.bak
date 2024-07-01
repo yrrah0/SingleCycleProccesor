@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity PCAdd4 is
+port(
+	A : in std_logic_vector(31 downto 0);
+	O : out std_logic_vector(31 downto 0)
+	);
+end;
+
+architecture rtl of PCAdd4 is
+
+signal int_O : std_logic_vector(31 downto 0);
+signal int_C : std_logic_vector(32 downto 0);
+
+component fullAdder is
+port(
+	A,B,C : in std_logic;
+	S,Cout: out std_logic
+	);
+end component;
+
+	Add_inst0 : fullAdder
+	port map(A(0),"0","0","0",int_O(0),int_C(1));
+	
+	Add_inst1 : fullAdder
+	port map(A(1),"0","0","0",int_O(0),int_C(1));
+	
+	Add_inst2 : fullAdder
+	port map(A(2),"1","0","0",int_O(0),int_C(1));
+
+	gen_Add : for i in 3 to 31 generate
+	Add_inst : fullAdder
+	port map(A(i),"0","0",int_C(i),int_O(i),int_C(i+1));
+	
+	

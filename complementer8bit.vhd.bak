@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity complementer8bit is
+port(
+	A : in std_logic_vector(7 downto 0);
+	B : in std_logic;
+	O : out std_logic_vector(7 downto 0)
+	);
+end;
+
+architecture rtl of complementer8bit is
+
+begin
+
+	for i in 0 to 7 loop
+	O <= A(i) xor B;
+	end loop;
+
+end rtl;

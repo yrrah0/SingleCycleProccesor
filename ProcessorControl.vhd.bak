@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ProcessorControl is
+port(
+	opcode : in std_logic_vector(5 downto 0);
+	RegDst,Jump,Branch,MemRead,MemToReg,MemWrite,ALUSrc,RegWrite : out std_logic;
+	ALUOp : out std_logic_vector(2 downto 0)
+	);
+end;
+
+architecture rtl of ProcessorControl is
+
+begin
+end;
+	

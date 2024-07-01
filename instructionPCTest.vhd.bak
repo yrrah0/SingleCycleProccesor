@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity instructionPCTest is
+	port(
+		PC,newPC : out std_logic_vector(7 downto 0);
+		instruct : out std_logic_vector(31 downto 0)
+		);
+end;
+
+architecture rtl of instructionPCTest is
+
+signal int_PC,int_newPC : std_logic_vector(7 downto 0);
+signal int_instruct : std_logic_vector(31 downto 0);
+
+begin
+end;

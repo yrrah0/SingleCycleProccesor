@@ -1,0 +1,56 @@
+vlog -work work C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/simulation/modelsim/Waveform23.vwf.vt
+vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate work.ProcessorMIPS_vlg_vec_tst
+onerror {resume}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/BranchOut}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/GClock}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/GResetBar}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[31]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[30]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[29]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[28]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[27]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[26]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[25]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[24]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[23]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[22]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[21]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[20]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[19]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[18]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[17]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[16]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[15]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[14]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[13]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[12]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[11]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[10]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[9]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[8]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[7]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[6]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[5]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[4]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[3]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[2]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[1]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/InstructionOut[0]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/MemWriteOut}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/MuxOut}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/MuxOut[7]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/MuxOut[6]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/MuxOut[5]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/MuxOut[4]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/MuxOut[3]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/MuxOut[2]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/MuxOut[1]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/MuxOut[0]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/RegWriteOut}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/ValueSelect}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/ValueSelect[2]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/ValueSelect[1]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/ValueSelect[0]}
+add wave {ProcessorMIPS_vlg_vec_tst/i1/ZeroOut}
+run -all

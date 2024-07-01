@@ -1,0 +1,56 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux256to1 is
+port(
+	i_sel : in std_logic_vector(7 downto 0);
+	i_in: in std_logic_vector(2047 downto 0);
+	o_out : out std_logic_vector(7 downto 0)
+	);
+end mux32to1;
+
+architecture rtl of mux256to1 is
+signal int_mux0,int_mux1,int_mux2,int_mux3,int_mux4,int_mux5,int_mux6,int_mux7,int_out : std_logic_vector(7 downto 0);
+
+component mux32to1 is
+port(
+	i_sel : in std_logic_vector(4 downto 0);
+	i_0in,i_1in,i_2in,i_3in,i_4in,i_5in,i_6in,i_7in,i_8in,i_9in,i_10in,i_11in,
+	i_12in,i_13in,i_14in,i_15in,i_16in,i_17in,i_18in,i_19in,i_20in,
+	i_21in,i_22in,i_23in,i_24in,i_25in,i_26in,i_27in,i_28in,i_29in,i_30in,
+	i_31in : in std_logic_vector(7 downto 0);
+	o_out : out std_logic_vector(7 downto 0)
+	);
+end component;
+
+component mux32to1 is
+port(
+	i_sel : in std_logic_vector(1 downto 0);
+	i_in0,i_in1,i_in2,i_in3 : in std_logic_vector(7 downto 0);
+	o_out : out std_logic_vector(7 downto 0)
+	);
+end component;
+
+begin
+
+	mux0 : mux32to1
+	port map(i_sel(2 downto 0),i_0in,i_1in,i_2in,i_3in,i_4in,i_5in,i_6in,i_7in,int_mux0);
+	
+	mux1 : mux32to1
+	port map(i_sel(2 downto 0),i_8in,i_9in,i_10in,i_11in,i_12in,i_13in,i_14in,i_15in,int_mux1);
+	
+	mux2 : mux32to1
+	port map(i_sel(2 downto 0),i_16in,i_17in,i_18in,i_19in,i_20in,i_21in,i_22in,i_23in,int_mux2);
+	
+	mux3 : mux32to1
+	port map(i_sel(2 downto 0),i_24in,i_25in,i_26in,i_27in,i_28in,i_29in,i_30in,i_31in,int_mux3);
+	
+	
+	
+	--Output Drivers
+	
+	o_out <= int_out;
+
+end rtl;
+		
+	
