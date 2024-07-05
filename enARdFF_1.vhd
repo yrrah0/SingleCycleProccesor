@@ -12,10 +12,22 @@ architecture rtl of enARdFF_1 is
  SIGNAL int_sSignal, int_rSignal : STD_LOGIC;
  BEGIN
  -- Concurrent Signal Assignment
- int_sSignal <= i_d and i_en and clk;
- int_rSignal <= (not(i_d) and i_en and clk);
- int_q <= not(int_rSignal or int_qBar) and i_resetBar;
- int_qBar <= not(int_q or int_sSignal) or not(i_resetBar);
+-- int_sSignal <= i_d and i_en and clk;
+ --int_rSignal <= (not(i_d) and i_en and clk);
+ --int_q <= not(not(i_d) and i_en and (clk or int_qBar)) and i_resetBar;
+ --int_qBar <= not((int_q or i_d) and i_en and clk) or not(i_resetBar);
+   onebitregister : process (i_resetBar, clk) is
+  begin
+
+    if (i_resetBar = '0') then
+      int_q <= '0';
+    elsif (clk'EVENT and clk = '1') then
+      if (i_en = '1') then
+        int_q <= i_d;
+      end if;
+    end if;
+
+  end process onebitregister;
  
  --Output Drivers
 

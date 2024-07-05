@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SingleCycle
-Sun Jun 30 15:13:01 2024
+Fri Jul 05 02:04:52 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,9 +13,56 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for ROM1Port:InstructMem|altsyncram:altsyncram_component|altsyncram_4ia1:auto_generated
+ 14. Source assignments for RAM1Port:RAM|altsyncram:altsyncram_component|altsyncram_81h1:auto_generated
+ 15. Parameter Settings for User Entity Instance: ROM1Port:InstructMem|altsyncram:altsyncram_component
+ 16. Parameter Settings for User Entity Instance: RAM1Port:RAM|altsyncram:altsyncram_component
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. Port Connectivity Checks: "mux2to1bit32:JumpMux"
+ 19. Port Connectivity Checks: "fullAdder32bit:BranchCalc|fullAdder:\gen_Add:31:Add_inst"
+ 20. Port Connectivity Checks: "fullAdder32bit:BranchCalc"
+ 21. Port Connectivity Checks: "ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit"
+ 22. Port Connectivity Checks: "mux2to1bit5:muxWriteReg"
+ 23. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:31:Add_inst"
+ 24. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:30:Add_inst"
+ 25. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:29:Add_inst"
+ 26. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:28:Add_inst"
+ 27. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:27:Add_inst"
+ 28. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:26:Add_inst"
+ 29. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:25:Add_inst"
+ 30. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:24:Add_inst"
+ 31. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:23:Add_inst"
+ 32. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:22:Add_inst"
+ 33. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:21:Add_inst"
+ 34. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:20:Add_inst"
+ 35. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:19:Add_inst"
+ 36. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:18:Add_inst"
+ 37. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:17:Add_inst"
+ 38. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:16:Add_inst"
+ 39. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:15:Add_inst"
+ 40. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:14:Add_inst"
+ 41. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:13:Add_inst"
+ 42. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:12:Add_inst"
+ 43. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:11:Add_inst"
+ 44. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:10:Add_inst"
+ 45. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:9:Add_inst"
+ 46. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:8:Add_inst"
+ 47. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:7:Add_inst"
+ 48. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:6:Add_inst"
+ 49. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:5:Add_inst"
+ 50. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:4:Add_inst"
+ 51. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:3:Add_inst"
+ 52. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:2:Add_inst"
+ 53. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:1:Add_inst"
+ 54. Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:0:Add_inst"
+ 55. Port Connectivity Checks: "PCAdd4:PCNorm"
+ 56. Elapsed Time Per Partition
+ 57. Analysis & Synthesis Messages
 
 
 
@@ -41,18 +88,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 30 15:13:01 2024           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul 05 02:04:52 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; SingleCycle                                     ;
-; Top-level Entity Name              ; fullAdder                                       ;
+; Top-level Entity Name              ; ProcessorMIPS                                   ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 2                                               ;
-;     Total combinational functions  ; 2                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 5                                               ;
+; Total logic elements               ; 312                                             ;
+;     Total combinational functions  ; 256                                             ;
+;     Dedicated logic registers      ; 70                                              ;
+; Total registers                    ; 70                                              ;
+; Total pins                         ; 49                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
+; Total memory bits                  ; 10,240                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -63,7 +110,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; fullAdder          ; SingleCycle        ;
+; Top-level entity name                                                      ; ProcessorMIPS      ; SingleCycle        ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,53 +202,258 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                          ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                   ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
-; fullAdder.vhd                    ; yes             ; User VHDL File  ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/fullAdder.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                            ; Library ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; ROM1Port.vhd                     ; yes             ; User Wizard-Generated File       ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/ROM1Port.vhd           ;         ;
+; RAM1Port.vhd                     ; yes             ; User Wizard-Generated File       ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/RAM1Port.vhd           ;         ;
+; SetLessThan.vhd                  ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/SetLessThan.vhd        ;         ;
+; registerFile.vhd                 ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/registerFile.vhd       ;         ;
+; register8bit.vhd                 ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/register8bit.vhd       ;         ;
+; ProcessorMIPS.vhd                ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/ProcessorMIPS.vhd      ;         ;
+; ProcessorControl.vhd             ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/ProcessorControl.vhd   ;         ;
+; PCAdd4.vhd                       ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/PCAdd4.vhd             ;         ;
+; or8to8.vhd                       ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/or8to8.vhd             ;         ;
+; mux8to1.vhd                      ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/mux8to1.vhd            ;         ;
+; mux2to1bit5.vhd                  ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/mux2to1bit5.vhd        ;         ;
+; mux2to1bit32.vhd                 ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/mux2to1bit32.vhd       ;         ;
+; mux2to1.vhd                      ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/mux2to1.vhd            ;         ;
+; LogicUnit.vhd                    ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/LogicUnit.vhd          ;         ;
+; JumpShiftCombPC.vhd              ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/JumpShiftCombPC.vhd    ;         ;
+; fullAdder8bit.vhd                ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/fullAdder8bit.vhd      ;         ;
+; fullAdder32bit.vhd               ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/fullAdder32bit.vhd     ;         ;
+; fullAdder.vhd                    ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/fullAdder.vhd          ;         ;
+; extend32leftshift2.vhd           ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/extend32leftshift2.vhd ;         ;
+; enARdFF_1.vhd                    ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/enARdFF_1.vhd          ;         ;
+; decoder3to8.vhd                  ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/decoder3to8.vhd        ;         ;
+; complementer8bit.vhd             ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/complementer8bit.vhd   ;         ;
+; combineData.vhd                  ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/combineData.vhd        ;         ;
+; ArthmeticUnit.vhd                ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/ArthmeticUnit.vhd      ;         ;
+; and8to8.vhd                      ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/and8to8.vhd            ;         ;
+; and1to7.vhd                      ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/and1to7.vhd            ;         ;
+; and1to5.vhd                      ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/and1to5.vhd            ;         ;
+; and1to32.vhd                     ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/and1to32.vhd           ;         ;
+; and1to1.vhd                      ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/and1to1.vhd            ;         ;
+; ALUControl.vhd                   ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/ALUControl.vhd         ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File                   ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/ALU.vhd                ;         ;
+; instruction.mif                  ; yes             ; User Memory Initialization File  ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/instruction.mif        ;         ;
+; memory.mif                       ; yes             ; User Memory Initialization File  ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/memory.mif             ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                 ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                            ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                          ;         ;
+; db/altsyncram_4ia1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/db/altsyncram_4ia1.tdf ;         ;
+; db/altsyncram_81h1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/db/altsyncram_81h1.tdf ;         ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimated Total logic elements              ; 2       ;
-;                                             ;         ;
-; Total combinational functions               ; 2       ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 0       ;
-;     -- 3 input functions                    ; 2       ;
-;     -- <=2 input functions                  ; 0       ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 2       ;
-;     -- arithmetic mode                      ; 0       ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-;     -- Dedicated logic registers            ; 0       ;
-;     -- I/O registers                        ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 5       ;
-; Embedded Multiplier 9-bit elements          ; 0       ;
-; Maximum fan-out node                        ; A~input ;
-; Maximum fan-out                             ; 2       ;
-; Total fan-out                               ; 13      ;
-; Average fan-out                             ; 1.08    ;
-+---------------------------------------------+---------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 312          ;
+;                                             ;              ;
+; Total combinational functions               ; 256          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 155          ;
+;     -- 3 input functions                    ; 95           ;
+;     -- <=2 input functions                  ; 6            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 249          ;
+;     -- arithmetic mode                      ; 7            ;
+;                                             ;              ;
+; Total registers                             ; 70           ;
+;     -- Dedicated logic registers            ; 70           ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 49           ;
+; Total memory bits                           ; 10240        ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+; Maximum fan-out node                        ; GClock~input ;
+; Maximum fan-out                             ; 110          ;
+; Total fan-out                               ; 1636         ;
+; Average fan-out                             ; 3.53         ;
++---------------------------------------------+--------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |fullAdder                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |fullAdder          ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Library Name ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+; |ProcessorMIPS                                ; 256 (2)           ; 70 (0)       ; 10240       ; 0            ; 0       ; 0         ; 49   ; 0            ; |ProcessorMIPS                                                                                          ; work         ;
+;    |ALU:ALUCom|                               ; 51 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom                                                                               ; work         ;
+;       |ArthmeticUnit:AU|                      ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|ArthmeticUnit:AU                                                              ; work         ;
+;          |fullAdder8bit:Unit|                 ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit                                           ; work         ;
+;             |fullAdder:\gen_Add:0:Add_inst|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit|fullAdder:\gen_Add:0:Add_inst             ; work         ;
+;             |fullAdder:\gen_Add:1:Add_inst|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit|fullAdder:\gen_Add:1:Add_inst             ; work         ;
+;             |fullAdder:\gen_Add:2:Add_inst|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit|fullAdder:\gen_Add:2:Add_inst             ; work         ;
+;             |fullAdder:\gen_Add:3:Add_inst|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit|fullAdder:\gen_Add:3:Add_inst             ; work         ;
+;             |fullAdder:\gen_Add:4:Add_inst|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit|fullAdder:\gen_Add:4:Add_inst             ; work         ;
+;             |fullAdder:\gen_Add:5:Add_inst|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit|fullAdder:\gen_Add:5:Add_inst             ; work         ;
+;             |fullAdder:\gen_Add:6:Add_inst|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit|fullAdder:\gen_Add:6:Add_inst             ; work         ;
+;             |fullAdder:\gen_Add:7:Add_inst|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit|fullAdder:\gen_Add:7:Add_inst             ; work         ;
+;       |LogicUnit:LU|                          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|LogicUnit:LU                                                                  ; work         ;
+;          |mux2to1:muxComb|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|LogicUnit:LU|mux2to1:muxComb                                                  ; work         ;
+;       |SetLessThan:SLT|                       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|SetLessThan:SLT                                                               ; work         ;
+;       |mux2to1:muxFinal|                      ; 29 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|mux2to1:muxFinal                                                              ; work         ;
+;          |and1to7:muxA|                       ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|mux2to1:muxFinal|and1to7:muxA                                                 ; work         ;
+;             |and1to1:\gen_And:1:and1to1_inst| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|mux2to1:muxFinal|and1to7:muxA|and1to1:\gen_And:1:and1to1_inst                 ; work         ;
+;             |and1to1:\gen_And:2:and1to1_inst| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|mux2to1:muxFinal|and1to7:muxA|and1to1:\gen_And:2:and1to1_inst                 ; work         ;
+;             |and1to1:\gen_And:3:and1to1_inst| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|mux2to1:muxFinal|and1to7:muxA|and1to1:\gen_And:3:and1to1_inst                 ; work         ;
+;             |and1to1:\gen_And:4:and1to1_inst| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|mux2to1:muxFinal|and1to7:muxA|and1to1:\gen_And:4:and1to1_inst                 ; work         ;
+;             |and1to1:\gen_And:5:and1to1_inst| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|mux2to1:muxFinal|and1to7:muxA|and1to1:\gen_And:5:and1to1_inst                 ; work         ;
+;             |and1to1:\gen_And:6:and1to1_inst| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|mux2to1:muxFinal|and1to7:muxA|and1to1:\gen_And:6:and1to1_inst                 ; work         ;
+;             |and1to1:\gen_And:7:and1to1_inst| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALU:ALUCom|mux2to1:muxFinal|and1to7:muxA|and1to1:\gen_And:7:and1to1_inst                 ; work         ;
+;    |ALUControl:ALUCon|                        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ALUControl:ALUCon                                                                        ; work         ;
+;    |PCAdd4:PCNorm|                            ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|PCAdd4:PCNorm                                                                            ; work         ;
+;       |fullAdder:\gen_Add:3:Add_inst|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|PCAdd4:PCNorm|fullAdder:\gen_Add:3:Add_inst                                              ; work         ;
+;       |fullAdder:\gen_Add:4:Add_inst|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|PCAdd4:PCNorm|fullAdder:\gen_Add:4:Add_inst                                              ; work         ;
+;       |fullAdder:\gen_Add:5:Add_inst|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|PCAdd4:PCNorm|fullAdder:\gen_Add:5:Add_inst                                              ; work         ;
+;       |fullAdder:\gen_Add:6:Add_inst|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|PCAdd4:PCNorm|fullAdder:\gen_Add:6:Add_inst                                              ; work         ;
+;    |ProcessorControl:ProcessorCntrl|          ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ProcessorControl:ProcessorCntrl                                                          ; work         ;
+;    |RAM1Port:RAM|                             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|RAM1Port:RAM                                                                             ; work         ;
+;       |altsyncram:altsyncram_component|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|RAM1Port:RAM|altsyncram:altsyncram_component                                             ; work         ;
+;          |altsyncram_81h1:auto_generated|     ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|RAM1Port:RAM|altsyncram:altsyncram_component|altsyncram_81h1:auto_generated              ; work         ;
+;    |ROM1Port:InstructMem|                     ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ROM1Port:InstructMem                                                                     ; work         ;
+;       |altsyncram:altsyncram_component|       ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ROM1Port:InstructMem|altsyncram:altsyncram_component                                     ; work         ;
+;          |altsyncram_4ia1:auto_generated|     ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|ROM1Port:InstructMem|altsyncram:altsyncram_component|altsyncram_4ia1:auto_generated      ; work         ;
+;    |fullAdder32bit:BranchCalc|                ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|fullAdder32bit:BranchCalc                                                                ; work         ;
+;       |fullAdder:\gen_Add:3:Add_inst|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|fullAdder32bit:BranchCalc|fullAdder:\gen_Add:3:Add_inst                                  ; work         ;
+;       |fullAdder:\gen_Add:4:Add_inst|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|fullAdder32bit:BranchCalc|fullAdder:\gen_Add:4:Add_inst                                  ; work         ;
+;       |fullAdder:\gen_Add:5:Add_inst|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|fullAdder32bit:BranchCalc|fullAdder:\gen_Add:5:Add_inst                                  ; work         ;
+;       |fullAdder:\gen_Add:6:Add_inst|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|fullAdder32bit:BranchCalc|fullAdder:\gen_Add:6:Add_inst                                  ; work         ;
+;    |mux2to1:muxALUB|                          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|mux2to1:muxALUB                                                                          ; work         ;
+;    |mux2to1:muxMem|                           ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|mux2to1:muxMem                                                                           ; work         ;
+;    |mux2to1bit32:JumpMux|                     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|mux2to1bit32:JumpMux                                                                     ; work         ;
+;    |mux2to1bit5:muxWriteReg|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|mux2to1bit5:muxWriteReg                                                                  ; work         ;
+;    |mux8to1:OutputMux|                        ; 36 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|mux8to1:OutputMux                                                                        ; work         ;
+;       |and1to7:in4|                           ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|mux8to1:OutputMux|and1to7:in4                                                            ; work         ;
+;          |and1to1:\gen_And:0:and1to1_inst|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|mux8to1:OutputMux|and1to7:in4|and1to1:\gen_And:0:and1to1_inst                            ; work         ;
+;    |register8bit:PCReg|                       ; 12 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|register8bit:PCReg                                                                       ; work         ;
+;       |enARdFF_1:\gen_dFF:2:dFF_inst|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|register8bit:PCReg|enARdFF_1:\gen_dFF:2:dFF_inst                                         ; work         ;
+;       |enARdFF_1:\gen_dFF:3:dFF_inst|         ; 4 (4)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|register8bit:PCReg|enARdFF_1:\gen_dFF:3:dFF_inst                                         ; work         ;
+;       |enARdFF_1:\gen_dFF:4:dFF_inst|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|register8bit:PCReg|enARdFF_1:\gen_dFF:4:dFF_inst                                         ; work         ;
+;       |enARdFF_1:\gen_dFF:5:dFF_inst|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|register8bit:PCReg|enARdFF_1:\gen_dFF:5:dFF_inst                                         ; work         ;
+;       |enARdFF_1:\gen_dFF:6:dFF_inst|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|register8bit:PCReg|enARdFF_1:\gen_dFF:6:dFF_inst                                         ; work         ;
+;       |enARdFF_1:\gen_dFF:7:dFF_inst|         ; 5 (5)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|register8bit:PCReg|enARdFF_1:\gen_dFF:7:dFF_inst                                         ; work         ;
+;    |registerFile:RegFile|                     ; 106 (10)          ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile                                                                     ; work         ;
+;       |mux8to1:readData1|                     ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|mux8to1:readData1                                                   ; work         ;
+;       |mux8to1:readData2|                     ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|mux8to1:readData2                                                   ; work         ;
+;       |register8bit:\gen_Reg:0:register_inst| ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:0:register_inst                               ; work         ;
+;          |enARdFF_1:\gen_dFF:0:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:0:register_inst|enARdFF_1:\gen_dFF:0:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:1:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:0:register_inst|enARdFF_1:\gen_dFF:1:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:2:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:0:register_inst|enARdFF_1:\gen_dFF:2:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:3:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:0:register_inst|enARdFF_1:\gen_dFF:3:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:4:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:0:register_inst|enARdFF_1:\gen_dFF:4:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:5:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:0:register_inst|enARdFF_1:\gen_dFF:5:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:6:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:0:register_inst|enARdFF_1:\gen_dFF:6:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:7:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:0:register_inst|enARdFF_1:\gen_dFF:7:dFF_inst ; work         ;
+;       |register8bit:\gen_Reg:1:register_inst| ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:1:register_inst                               ; work         ;
+;          |enARdFF_1:\gen_dFF:0:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:1:register_inst|enARdFF_1:\gen_dFF:0:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:1:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:1:register_inst|enARdFF_1:\gen_dFF:1:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:2:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:1:register_inst|enARdFF_1:\gen_dFF:2:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:3:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:1:register_inst|enARdFF_1:\gen_dFF:3:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:4:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:1:register_inst|enARdFF_1:\gen_dFF:4:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:5:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:1:register_inst|enARdFF_1:\gen_dFF:5:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:6:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:1:register_inst|enARdFF_1:\gen_dFF:6:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:7:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:1:register_inst|enARdFF_1:\gen_dFF:7:dFF_inst ; work         ;
+;       |register8bit:\gen_Reg:2:register_inst| ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:2:register_inst                               ; work         ;
+;          |enARdFF_1:\gen_dFF:0:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:2:register_inst|enARdFF_1:\gen_dFF:0:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:1:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:2:register_inst|enARdFF_1:\gen_dFF:1:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:2:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:2:register_inst|enARdFF_1:\gen_dFF:2:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:3:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:2:register_inst|enARdFF_1:\gen_dFF:3:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:4:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:2:register_inst|enARdFF_1:\gen_dFF:4:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:5:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:2:register_inst|enARdFF_1:\gen_dFF:5:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:6:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:2:register_inst|enARdFF_1:\gen_dFF:6:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:7:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:2:register_inst|enARdFF_1:\gen_dFF:7:dFF_inst ; work         ;
+;       |register8bit:\gen_Reg:3:register_inst| ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:3:register_inst                               ; work         ;
+;          |enARdFF_1:\gen_dFF:0:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:3:register_inst|enARdFF_1:\gen_dFF:0:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:1:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:3:register_inst|enARdFF_1:\gen_dFF:1:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:2:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:3:register_inst|enARdFF_1:\gen_dFF:2:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:3:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:3:register_inst|enARdFF_1:\gen_dFF:3:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:4:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:3:register_inst|enARdFF_1:\gen_dFF:4:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:5:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:3:register_inst|enARdFF_1:\gen_dFF:5:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:6:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:3:register_inst|enARdFF_1:\gen_dFF:6:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:7:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:3:register_inst|enARdFF_1:\gen_dFF:7:dFF_inst ; work         ;
+;       |register8bit:\gen_Reg:4:register_inst| ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:4:register_inst                               ; work         ;
+;          |enARdFF_1:\gen_dFF:0:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:4:register_inst|enARdFF_1:\gen_dFF:0:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:1:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:4:register_inst|enARdFF_1:\gen_dFF:1:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:2:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:4:register_inst|enARdFF_1:\gen_dFF:2:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:3:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:4:register_inst|enARdFF_1:\gen_dFF:3:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:4:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:4:register_inst|enARdFF_1:\gen_dFF:4:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:5:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:4:register_inst|enARdFF_1:\gen_dFF:5:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:6:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:4:register_inst|enARdFF_1:\gen_dFF:6:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:7:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:4:register_inst|enARdFF_1:\gen_dFF:7:dFF_inst ; work         ;
+;       |register8bit:\gen_Reg:5:register_inst| ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:5:register_inst                               ; work         ;
+;          |enARdFF_1:\gen_dFF:0:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:5:register_inst|enARdFF_1:\gen_dFF:0:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:1:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:5:register_inst|enARdFF_1:\gen_dFF:1:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:2:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:5:register_inst|enARdFF_1:\gen_dFF:2:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:3:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:5:register_inst|enARdFF_1:\gen_dFF:3:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:4:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:5:register_inst|enARdFF_1:\gen_dFF:4:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:5:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:5:register_inst|enARdFF_1:\gen_dFF:5:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:6:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:5:register_inst|enARdFF_1:\gen_dFF:6:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:7:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:5:register_inst|enARdFF_1:\gen_dFF:7:dFF_inst ; work         ;
+;       |register8bit:\gen_Reg:6:register_inst| ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:6:register_inst                               ; work         ;
+;          |enARdFF_1:\gen_dFF:0:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:6:register_inst|enARdFF_1:\gen_dFF:0:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:1:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:6:register_inst|enARdFF_1:\gen_dFF:1:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:2:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:6:register_inst|enARdFF_1:\gen_dFF:2:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:3:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:6:register_inst|enARdFF_1:\gen_dFF:3:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:4:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:6:register_inst|enARdFF_1:\gen_dFF:4:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:5:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:6:register_inst|enARdFF_1:\gen_dFF:5:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:6:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:6:register_inst|enARdFF_1:\gen_dFF:6:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:7:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:6:register_inst|enARdFF_1:\gen_dFF:7:dFF_inst ; work         ;
+;       |register8bit:\gen_Reg:7:register_inst| ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:7:register_inst                               ; work         ;
+;          |enARdFF_1:\gen_dFF:0:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:7:register_inst|enARdFF_1:\gen_dFF:0:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:1:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:7:register_inst|enARdFF_1:\gen_dFF:1:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:2:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:7:register_inst|enARdFF_1:\gen_dFF:2:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:3:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:7:register_inst|enARdFF_1:\gen_dFF:3:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:4:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:7:register_inst|enARdFF_1:\gen_dFF:4:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:5:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:7:register_inst|enARdFF_1:\gen_dFF:5:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:6:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:7:register_inst|enARdFF_1:\gen_dFF:6:dFF_inst ; work         ;
+;          |enARdFF_1:\gen_dFF:7:dFF_inst|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcessorMIPS|registerFile:RegFile|register8bit:\gen_Reg:7:register_inst|enARdFF_1:\gen_dFF:7:dFF_inst ; work         ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                         ;
++------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+-----------------+
+; Name                                                                                           ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF             ;
++------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+-----------------+
+; RAM1Port:RAM|altsyncram:altsyncram_component|altsyncram_81h1:auto_generated|ALTSYNCRAM         ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; memory.mif      ;
+; ROM1Port:InstructMem|altsyncram:altsyncram_component|altsyncram_4ia1:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 256          ; 32           ; --           ; --           ; 8192 ; instruction.mif ;
++------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                               ;
++--------+--------------+---------+--------------+--------------+-------------------------------------+-----------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                     ; IP Include File                                                                               ;
++--------+--------------+---------+--------------+--------------+-------------------------------------+-----------------------------------------------------------------------------------------------+
+; Altera ; ROM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |ProcessorMIPS|ROM1Port:InstructMem ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/ROM1Port.vhd ;
+; Altera ; RAM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |ProcessorMIPS|RAM1Port:RAM         ; C:/Users/lehar/Documents/CEG3156 Lab/Lab2Sub/Lab2Processor8Bit/Lab2Processor8Bit/RAM1Port.vhd ;
++--------+--------------+---------+--------------+--------------+-------------------------------------+-----------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                          ;
++--------------------------------------------------------+--------------------------------------------------------------------+
+; Register name                                          ; Reason for Removal                                                 ;
++--------------------------------------------------------+--------------------------------------------------------------------+
+; register8bit:PCReg|enARdFF_1:\gen_dFF:0:dFF_inst|int_q ; Merged with register8bit:PCReg|enARdFF_1:\gen_dFF:1:dFF_inst|int_q ;
+; register8bit:PCReg|enARdFF_1:\gen_dFF:1:dFF_inst|int_q ; Stuck at GND due to stuck port data_in                             ;
+; Total Number of Removed Registers = 2                  ;                                                                    ;
++--------------------------------------------------------+--------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -209,14 +461,540 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 70    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Asynchronous Clear ; 70    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 64    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |ProcessorMIPS|register8bit:PCReg|enARdFF_1:\gen_dFF:2:dFF_inst|int_q ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ProcessorMIPS|ALUControl:ALUCon|Mux3                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM1Port:InstructMem|altsyncram:altsyncram_component|altsyncram_4ia1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                           ;
++---------------------------------+--------------------+------+----------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                            ;
++---------------------------------+--------------------+------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Source assignments for RAM1Port:RAM|altsyncram:altsyncram_component|altsyncram_81h1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------+
+; Assignment                      ; Value              ; From ; To                                   ;
++---------------------------------+--------------------+------+--------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                    ;
++---------------------------------+--------------------+------+--------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM1Port:InstructMem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------+
+; Parameter Name                     ; Value                ; Type                                  ;
++------------------------------------+----------------------+---------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                               ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                        ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                               ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                               ;
+; WIDTH_A                            ; 32                   ; Signed Integer                        ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                        ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                        ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                               ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                               ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                               ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                               ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                               ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                               ;
+; WIDTH_B                            ; 1                    ; Untyped                               ;
+; WIDTHAD_B                          ; 1                    ; Untyped                               ;
+; NUMWORDS_B                         ; 1                    ; Untyped                               ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                               ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                               ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                               ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                               ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                               ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                               ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                               ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                               ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                               ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                               ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                               ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                               ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                        ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                               ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                               ;
+; BYTE_SIZE                          ; 8                    ; Untyped                               ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                               ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                               ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                               ;
+; INIT_FILE                          ; instruction.mif      ; Untyped                               ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                               ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                               ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                               ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                               ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                               ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                               ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                               ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                               ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                               ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                               ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                               ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                               ;
+; CBXI_PARAMETER                     ; altsyncram_4ia1      ; Untyped                               ;
++------------------------------------+----------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAM1Port:RAM|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------+
+; Parameter Name                     ; Value                ; Type                          ;
++------------------------------------+----------------------+-------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                       ;
+; WIDTH_A                            ; 8                    ; Signed Integer                ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WIDTH_B                            ; 1                    ; Untyped                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; OLD_DATA             ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; INIT_FILE                          ; memory.mif           ; Untyped                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_81h1      ; Untyped                       ;
++------------------------------------+----------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                 ;
++-------------------------------------------+------------------------------------------------------+
+; Name                                      ; Value                                                ;
++-------------------------------------------+------------------------------------------------------+
+; Number of entity instances                ; 2                                                    ;
+; Entity Instance                           ; ROM1Port:InstructMem|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                  ;
+;     -- WIDTH_A                            ; 32                                                   ;
+;     -- NUMWORDS_A                         ; 256                                                  ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                         ;
+;     -- WIDTH_B                            ; 1                                                    ;
+;     -- NUMWORDS_B                         ; 1                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                            ;
+; Entity Instance                           ; RAM1Port:RAM|altsyncram:altsyncram_component         ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                          ;
+;     -- WIDTH_A                            ; 8                                                    ;
+;     -- NUMWORDS_A                         ; 256                                                  ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                         ;
+;     -- WIDTH_B                            ; 1                                                    ;
+;     -- NUMWORDS_B                         ; 1                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                            ;
++-------------------------------------------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux2to1bit32:JumpMux"                                                                   ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; o[31..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fullAdder32bit:BranchCalc|fullAdder:\gen_Add:31:Add_inst"                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fullAdder32bit:BranchCalc"                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit"                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux2to1bit5:muxWriteReg"                                                               ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; o[4..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:31:Add_inst"                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; b    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:30:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:29:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:28:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:27:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:26:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:25:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:24:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:23:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:22:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:21:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:20:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:19:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:18:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:17:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:16:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:15:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:14:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:13:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:12:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:11:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:10:Add_inst" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:9:Add_inst" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:8:Add_inst" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:7:Add_inst" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:6:Add_inst" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:5:Add_inst" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:4:Add_inst" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:3:Add_inst" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:2:Add_inst" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; b    ; Input ; Info     ; Stuck at VCC                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:1:Add_inst" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm|fullAdder:\gen_Add:0:Add_inst" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                  ;
+; c    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "PCAdd4:PCNorm"  ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; a[31..8] ; Input ; Info     ; Stuck at GND ;
++----------+-------+----------+--------------+
 
 
 +-------------------------------+
@@ -234,7 +1012,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Jun 30 15:13:00 2024
+    Info: Processing started: Fri Jul 05 02:04:48 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SingleCycle -c SingleCycle
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file rom1port.vhd
@@ -370,18 +1148,91 @@ Info (12021): Found 2 design units, including 1 entities, in source file alucont
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: ALU-rtl
     Info (12023): Found entity 1: ALU
-Info (12127): Elaborating entity "fullAdder" for the top level hierarchy
+Info (12127): Elaborating entity "ProcessorMIPS" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ProcessorMIPS.vhd(28): object "int_CoutBranch" assigned a value but never read
+Info (12128): Elaborating entity "register8bit" for hierarchy "register8bit:PCReg"
+Info (12128): Elaborating entity "enARdFF_1" for hierarchy "register8bit:PCReg|enARdFF_1:\gen_dFF:0:dFF_inst"
+Info (12128): Elaborating entity "ROM1Port" for hierarchy "ROM1Port:InstructMem"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM1Port:InstructMem|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "ROM1Port:InstructMem|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "ROM1Port:InstructMem|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "instruction.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4ia1.tdf
+    Info (12023): Found entity 1: altsyncram_4ia1
+Info (12128): Elaborating entity "altsyncram_4ia1" for hierarchy "ROM1Port:InstructMem|altsyncram:altsyncram_component|altsyncram_4ia1:auto_generated"
+Info (12128): Elaborating entity "PCAdd4" for hierarchy "PCAdd4:PCNorm"
+Info (12128): Elaborating entity "fullAdder" for hierarchy "PCAdd4:PCNorm|fullAdder:\gen_Add:0:Add_inst"
+Info (12128): Elaborating entity "JumpShiftCombPC" for hierarchy "JumpShiftCombPC:JumpBlock"
+Info (12128): Elaborating entity "mux2to1bit5" for hierarchy "mux2to1bit5:muxWriteReg"
+Info (12128): Elaborating entity "and1to5" for hierarchy "mux2to1bit5:muxWriteReg|and1to5:muxA"
+Info (12128): Elaborating entity "and1to1" for hierarchy "mux2to1bit5:muxWriteReg|and1to5:muxA|and1to1:\gen_And:0:and1to1_inst"
+Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:RegFile"
+Info (12128): Elaborating entity "decoder3to8" for hierarchy "registerFile:RegFile|decoder3to8:decodeWrite"
+Info (12128): Elaborating entity "mux8to1" for hierarchy "registerFile:RegFile|mux8to1:readData1"
+Info (12128): Elaborating entity "and1to7" for hierarchy "registerFile:RegFile|mux8to1:readData1|and1to7:in0"
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:muxALUB"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALUCom"
+Info (12128): Elaborating entity "ArthmeticUnit" for hierarchy "ALU:ALUCom|ArthmeticUnit:AU"
+Info (12128): Elaborating entity "complementer8bit" for hierarchy "ALU:ALUCom|ArthmeticUnit:AU|complementer8bit:comp"
+Info (12128): Elaborating entity "fullAdder8bit" for hierarchy "ALU:ALUCom|ArthmeticUnit:AU|fullAdder8bit:Unit"
+Info (12128): Elaborating entity "LogicUnit" for hierarchy "ALU:ALUCom|LogicUnit:LU"
+Info (12128): Elaborating entity "and8to8" for hierarchy "ALU:ALUCom|LogicUnit:LU|and8to8:andUnit"
+Info (12128): Elaborating entity "or8to8" for hierarchy "ALU:ALUCom|LogicUnit:LU|or8to8:orUnit"
+Info (12128): Elaborating entity "SetLessThan" for hierarchy "ALU:ALUCom|SetLessThan:SLT"
+Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:ALUCon"
+Info (12128): Elaborating entity "ProcessorControl" for hierarchy "ProcessorControl:ProcessorCntrl"
+Info (12128): Elaborating entity "RAM1Port" for hierarchy "RAM1Port:RAM"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM1Port:RAM|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "RAM1Port:RAM|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "RAM1Port:RAM|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "memory.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "OLD_DATA"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_81h1.tdf
+    Info (12023): Found entity 1: altsyncram_81h1
+Info (12128): Elaborating entity "altsyncram_81h1" for hierarchy "RAM1Port:RAM|altsyncram:altsyncram_component|altsyncram_81h1:auto_generated"
+Info (12128): Elaborating entity "extend32leftshift2" for hierarchy "extend32leftshift2:extenderAddr"
+Info (12128): Elaborating entity "fullAdder32bit" for hierarchy "fullAdder32bit:BranchCalc"
+Info (12128): Elaborating entity "mux2to1bit32" for hierarchy "mux2to1bit32:BranchMulti"
+Info (12128): Elaborating entity "and1to32" for hierarchy "mux2to1bit32:BranchMulti|and1to32:muxA"
+Info (12128): Elaborating entity "combineData" for hierarchy "combineData:OutMix"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 2 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4627 megabytes
-    Info: Processing ended: Sun Jun 30 15:13:01 2024
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info (21057): Implemented 409 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 44 output pins
+    Info (21061): Implemented 320 logic cells
+    Info (21064): Implemented 40 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4647 megabytes
+    Info: Processing ended: Fri Jul 05 02:04:52 2024
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

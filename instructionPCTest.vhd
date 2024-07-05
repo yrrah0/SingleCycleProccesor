@@ -49,7 +49,7 @@ end component;
 begin
 
 PCReg : register32bit
-port map(int_newPC,clk,resetbar,resetbar,int_PC);
+port map(int_newPC,clk,clk,resetbar,int_PC);
 
 --Mem : ROM1Port
 --port map(int_PC(7 downto 0),clk,int_instruct);

@@ -16,7 +16,7 @@ architecture rtl of register32bit is
 		o_q : out std_logic);
 	end component;
 	
-signal int_q : std_logic_vector	(31 downto 0) := (others => '0');
+signal int_q : std_logic_vector	(31 downto 0);
 
 begin
 

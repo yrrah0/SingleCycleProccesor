@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="SingleCycle_qsim">
-		<CBX_INST_ENTRY INSTANCE_NAME="|TestBlock|ProcessorMIPSBenchTest:inst|ALUControl:ALUCon|lpm_mux:Mux1" CBX_FILE_NAME="mux_1sc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|TestBlock|ProcessorMIPSBenchTest:inst|ALUControl:ALUCon|lpm_mux:Mux3" CBX_FILE_NAME="mux_7qc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|TestBlock|ProcessorMIPSBenchTest:inst|ALUControl:ALUCon|lpm_mux:Mux5" CBX_FILE_NAME="mux_7qc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|TestBlock|ProcessorMIPSBenchTest:inst|RAM1Port:RAM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_vvg1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|TestBlock|ProcessorMIPSBenchTest:inst|ALUControl:ALUCon|lpm_mux:Mux0" CBX_FILE_NAME="mux_rrc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|TestBlock|ProcessorMIPSBenchTest:inst|ALUControl:ALUCon|lpm_mux:Mux2" CBX_FILE_NAME="mux_1sc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|TestBlock|ProcessorMIPSBenchTest:inst|ALUControl:ALUCon|lpm_mux:Mux4" CBX_FILE_NAME="mux_7qc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|TestBlock|ProcessorMIPSBenchTest:inst|ROM1Port:InstructMem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_rga1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorMIPS|ALUControl:ALUCon|lpm_mux:Mux0" CBX_FILE_NAME="mux_rrc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorMIPS|ALUControl:ALUCon|lpm_mux:Mux2" CBX_FILE_NAME="mux_1sc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorMIPS|ALUControl:ALUCon|lpm_mux:Mux4" CBX_FILE_NAME="mux_7qc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorMIPS|ROM1Port:InstructMem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_rga1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorMIPS|ALUControl:ALUCon|lpm_mux:Mux1" CBX_FILE_NAME="mux_1sc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorMIPS|ALUControl:ALUCon|lpm_mux:Mux3" CBX_FILE_NAME="mux_7qc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorMIPS|ALUControl:ALUCon|lpm_mux:Mux5" CBX_FILE_NAME="mux_7qc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProcessorMIPS|RAM1Port:RAM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_vvg1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

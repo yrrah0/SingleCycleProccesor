@@ -5,7 +5,7 @@ entity ProcessorMIPSBenchTest is
 port(
 	ValueSelect : in std_logic_vector(2 downto 0);
 	GClock, GResetBar : in std_logic;
-	
+	inNum4 : in std_logic_vector(31 downto 0);
 	MuxOut : out std_logic_vector(7 downto 0);
 	InstructionOut : out std_logic_vector(31 downto 0);
 	BranchOut,ZeroOut,MemWriteOut,RegWriteOut,JumpO : out std_logic;
@@ -28,7 +28,7 @@ signal Read1Data,Read2Data, ALUResult,WriteData,MemData,ALUBin, FinalData,int_Ou
 
 signal ALUOp : std_logic_vector(1 downto 0):= (others => '0');
 
-signal zero,RegDst,Jump,Branch,MemRead,MemToReg,MemWrite,ALUSrc,RegWrite,int_CoutBranch : std_logic := ('0');
+signal zero,RegDst,Jump,Branch,MemRead,MemToReg,MemWrite,ALUSrc,RegWrite,int_CoutBranch,PCADDCout : std_logic := ('0');
 
 component RAM1Port is
 	PORT
@@ -107,12 +107,6 @@ port(
 	);
 end component;
 
-component PCAdd4 is
-port(
-	A : in std_logic_vector(31 downto 0);
-	O : out std_logic_vector(31 downto 0)
-	);
-end component;
 
 component ProcessorControl is
 port(
@@ -137,6 +131,14 @@ component register32bit is
 		i_d : in std_logic_vector(31 downto 0);
 		i_clk, i_en, i_resetBar : in std_logic;
 		o_q : out std_logic_vector(31 downto 0)
+		);
+end component;
+
+component register8bit is
+	port(
+		i_d : in std_logic_vector(7 downto 0);
+		i_clk, i_en, i_resetBar : in std_logic;
+		o_q : out std_logic_vector(7 downto 0)
 		);
 end component;
 
@@ -167,14 +169,14 @@ end component;
 begin
 
 -- Instruction Memory/PC
- PCReg : register32bit
- port map(newPC,GClock,GResetBar,GResetBar,PC);
+ PCReg : register8bit
+ port map(newPC(7 downto 0),GClock,GClock,GResetBar,PC(7 downto 0));
  
  InstructMem : ROM1Port
  port map(PC(7 downto 0),GClock,instruction);
  
- PCNorm : PCAdd4
- port map(PC,PC4Added);
+ PCNorm : fullAdder32bit
+ port map(PC,inNum4,'0',PC4Added,PCADDCout);
  
  JumpBlock : JumpShiftCombPC
  port map(instruction(25 downto 0),PC4Added(31 downto 28),JumpAddress);
